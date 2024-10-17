@@ -1,0 +1,14 @@
+{
+  "name": "esc",
+  "version": "1.0.0",
+  "description": "Hacker Escape Rooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcus Möller",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.1"
+  }
+}

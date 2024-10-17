@@ -1,2 +1,6 @@
 # ignore All .vscode files
-*.vscode
+.vscode
+#ingore node_modules
+node_modules
+#ignore style/css/main.min.css
+main.min.css
