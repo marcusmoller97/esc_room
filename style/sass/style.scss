@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*variables*/
+/*colors*/
+$darkBlue: #011827;
+$red: #e3170a;
+$grey: #B6BDB5;
+$blue: #36769D;
+$lightblue: #8ACFE5;
+$white: #FFFFFF;
+
+/* Base code */
+* {
+    box-sizing: border-box;
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 244px auto;
+    grid-template-rows: 144px 274px;
+    /* height: 624px; */
+    width: 100%;
+    flex-shrink: 0;
+
+    background-color: $darkBlue;
+
+    .section-logo {
+        grid-row-start: 1;
+        grid-column: 1 / span 2;
+
+        /* position: relative; */
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: 0.75rem;
+
+        /* top: 25px; */
+        display: flex;
+        align-items: center;
+        width: 100%;
+        /* margin-top: 25px; */
+
+        .esc-logo {
+            width: 128px;
+            height: 82px;
+        }
+
+        /* fix flex header text so its looks like 
+         in the site on 480px and then responsive goes out to
+         Hacker Escape Rooms */
+        .header-logo {
+            /* align-content: center; */
+            font-size: 1.5rem;
+            font-style: bold;
+            color: $white;
+
+            height: 82px;
+            width: 20%;
+            padding-left: 0.5rem;
+        }
+
+        .navbar {
+            display: none;
+        }
+    }
+
+    .esc-header {
+    
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    
+    width: 100%;
+    
+    height: 100%;
+}
+}
+
+
+
+
+
+/* main code */
+
+.white-btn {
+    background-color: #8ACFE5;
+    
+    width: 308px;
+    height: 66px;
+    
+    display: block;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn {
+    /* background-color: #E3170A; */
+    background-color: none;
+    border: none;
+
+    /* width: 308px;
+    height: 66px; */
+    /* opacity: 0; */
+}
+
+/* .quote {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    width: 439px;
+    height: 139px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-img {
+    grid-row-start: 1;
+    grid-column: 1 / span 1;
+}
+
+.quote p {
+    grid-row: 1;
+    grid-column: 2 / span 2;
+}
+
+.quote-visitor {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+} */
+
+.quote {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 439px;
+    max-height: 139px;
+    
+    .col-1 {
+        margin-left: auto;
+        margin-right: auto;
+    
+        .quote-img {
+            display: block;
+            float: left;
+        
+            /* padding-right: 10px; */
+            width: 73,34px;
+            height: 72px;
+        }
+        
+        .quote-txt {
+            width: 1fr;
+            font-family: Roboto;
+            font-size: 24px;
+            font-style: italic;
+        }
+    }
+
+}
+
+
+.col-2:last-of-type {
+    background-color: #E3170A;
+}
