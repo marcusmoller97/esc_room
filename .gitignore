@@ -3,4 +3,4 @@
 #ingore node_modules
 node_modules
 #ignore style/css/main.min.css
-*.min.css
+*.min.map
