@@ -17,7 +17,7 @@
         *
 
 * Styling (CSS)
-    *
+    * Fix box-shadow flex-booking
 
 
 

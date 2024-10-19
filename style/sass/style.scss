@@ -86,6 +86,8 @@ html, body {
 
 /* main code block */
 .main {
+    display: flex;
+    flex-direction:column;
     width: 100%;
     padding-top: 1.5rem;
 
@@ -104,7 +106,7 @@ html, body {
         font-weight: 600;
     }
     
-    /* .btn {
+    .btn {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -115,22 +117,7 @@ html, body {
 
         font-size: 1rem;
         text-decoration: underline;
-    } */
-
-    /* .blue-btn {
-        width: 308px;
-        height: 66px;
-
-        background-color: $lightblue;
-
-        display: block;
-        margin-top: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 5px;
-
-        font-size: 24px;
-    } */
+    }
 
     .quote {
         display: flex;
@@ -142,10 +129,11 @@ html, body {
         margin-top: 2rem;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 4rem;
     }
        .col-1 {
-        width: 20%;
-        flex-shrink: 0;
+        /* width: 20%; */
+        /* flex-shrink: 0; */
        }
    
         .col-2 {
@@ -166,6 +154,54 @@ html, body {
 
                 font-size: 1.1rem;
             }
+        }
+        
+        /* booking div */
+        .booking-header {
+            display: block;
+            margin-bottom: 2rem;
+
+            font-size: 32px;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+        
+        .flex-booking {
+            display: flex;
+            gap: 2rem;
+            align-items: stretch;
+
+            position: relative;
+            left: 52px;
+            overflow-x: hidden;
+
+            /*fix box shadow*/
+            .booking-col {
+                width: 363px;
+                box-shadow: 3px 3px 6px 1px #000000;
+                
+                .booking {
+                    /* box-shadow: 2px 2px 5px rgb(0, 0, 0.2); */
+                    width: 363px;
+                    height: 446px;
+                    
+                    .img-booking {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+    
+                        height: 219px;
+                        width: 100%;
+                        
+                        border-radius: 10px;
+                    }   
+                }
+            }
+        }
+
+        .story-col {
+            margin-top: 2rem;
         }
 }
 
