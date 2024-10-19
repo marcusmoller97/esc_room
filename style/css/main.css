@@ -136,30 +136,74 @@ html, body {
   display: flex;
   gap: 2rem;
   align-items: stretch;
-  position: relative;
-  left: 52px;
-  overflow-x: hidden;
-  /*fix box shadow*/
+  margin-left: 52px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: calc(100% - 52px);
 }
-.main .flex-booking .booking-col {
-  width: 363px;
-  box-shadow: 3px 3px 6px 1px #000000;
-}
-.main .flex-booking .booking-col .booking {
-  /* box-shadow: 2px 2px 5px rgb(0, 0, 0.2); */
-  width: 363px;
+.main .flex-booking .booking {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  max-width: 363px;
+  flex-shrink: 0;
   height: 446px;
-}
-.main .flex-booking .booking-col .booking .img-booking {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 219px;
-  width: 100%;
+  border: 1px solid #B6BDB5;
   border-radius: 10px;
 }
+.main .flex-booking .booking .img-booking {
+  max-width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 219px;
+  width: 100%;
+}
+.main .flex-booking .booking .review {
+  padding: 0.5rem;
+}
+.main .flex-booking .booking .review .review-header {
+  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0.5rem;
+}
+.main .flex-booking .booking .review .review-p {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+.main .flex-booking .booking .booking-btn {
+  display: block;
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #e3170a;
+  width: 180px;
+  height: 44px;
+}
 .main .story-col {
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: #011827;
+  width: 100%;
+  height: 500px;
+}
+.main p {
+  display: block;
+  margin-top: 4rem;
+  width: 90%;
+  flex-shrink: 0;
+}
+.main button {
+  font-size: 2rem;
+  background-color: #011827;
+  color: #8ACFE5;
+  border: 1px solid #8ACFE5;
+  width: 308px;
+  height: 66px;
 }
 
 /*# sourceMappingURL=main.css.map */
