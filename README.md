@@ -17,7 +17,8 @@
         *
 
 * Styling (CSS)
-    * Fix box-shadow flex-booking
+    * Fix hover over list
+    * Fix flex-booking
 
 
 
