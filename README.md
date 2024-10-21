@@ -20,5 +20,6 @@
     * Fix hover over list
     * Fix flex-booking
 
-
+* OBS!!!
+    *FIXA flex-booking
 

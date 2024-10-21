@@ -73,6 +73,21 @@ html, body {
     }
     .navbar {
         display: none;
+
+        .list {
+            list-style-type: none;
+
+            .item {
+                color: $white;
+                font-size: 1.5rem;
+                font-weight: 700;
+                text-decoration: none;
+
+                &:hover {
+                    color: $lightblue;
+                }
+            }
+        }
     }
 
     .esc-header {
@@ -130,7 +145,8 @@ html, body {
         .quote {
             display: flex;
             justify-content: center;
-            width: 91.5%;
+            max-width: 522px;
+            /* width: 91.5%; */
             flex-shrink: 0;
             height: 141px;
     
@@ -144,31 +160,28 @@ html, body {
         .hidden {
             display: none;
         }
-    }
-       .col-1 {
-        /* width: 20%; */
-        /* flex-shrink: 0; */
-       }
-   
+
         .col-2 {
             width: 80%;
             flex-shrink: 0;
             padding-left: 0.5rem;
-
+    
             line-height: $quoteLineHeight;
-
+    
             .quote-txt {
                 font-size: 1.5rem;
                 font-style: italic;
             }
-
+    
             .source {
                 display: block;
                 margin-top: 0.2rem;
-
+    
                 font-size: 1.1rem;
             }
         }
+    }
+
         
         /* booking div */
         .booking-header {
@@ -362,6 +375,8 @@ html, body {
 footer {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
     gap: 2rem;
     background-color: $darkBlue;
     color: $white;
@@ -369,7 +384,10 @@ footer {
     padding: 3rem 1.2rem;
 
     .box {
+        max-width: 438px;
+        flex-shrink: 0;
         font-size: 18px;
+        font-weight: 400;
 
         h4 {
             padding-bottom: 0.5rem;
@@ -391,6 +409,7 @@ footer {
     }
 }
 
+/* desktop view */
 @media screen and (min-width: 1280px) {
     body {
         width: 1280px;
@@ -400,6 +419,7 @@ footer {
         margin-right: auto;
     }
     
+    /* header code desktop */
     .header {
         grid-template-columns: 244px 1fr 1fr;
         grid-template-rows: 144px  72px 468px;
@@ -421,30 +441,7 @@ footer {
                 
             grid-row-start: 2;
             grid-column: span 3;
-
-            li {
-                list-style-type: none;
-                /* display: block; */
-                    
-                a { 
-                    display: block;
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                    color: $white;
-                    text-decoration: none;
-                        
-                    &:hover {
-                        color: $lightblue;
-                    }
-                }
-            }
-            
-            .navbar li a:hover {
-                text-decoration: underline;
-            }
         }
-            
-
         .esc-header {
             grid-row-start: 3;
         }
@@ -452,17 +449,51 @@ footer {
 
     }
 
+    /* main code desktop */
     .main {
+            margin: 0;
+            padding: 0;
 
-            /* .story-col {
-                padding: 2rem 10rem;
-            } */
+            .flex-booking {
+                margin-bottom: 8rem;
+            }
+
+            .buttons {
+                flex-direction: row-reverse;
+                
+                gap: 2rem;
+                flex-shrink: 0;
+                transform: translateY(-2rem);
+
+                .btn {
+                    font-size: 1.5rem;
+                    font-weight: 600rem;
+
+                    color: $white;
+                    background-color: $red;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    
+                    display: block;
+                    margin-bottom: 2rem;
+                    height: 66px;
+                    width: 308px;
+                }
+            }
+
+            .quote-flex {
+                display: flex;
+                width: 100%;
+
+                .hidden {
+                    display: flex;
+                }
+            }
+
             .picture-grid {
                 grid-template-columns: 640px 640px;
                 grid-template-rows: 460px 460px;
                 img {
-                    /* width: auto; */
-                    /* height: auto; */
                     object-fit: fill;
                     height: 100%;
                 }
@@ -483,27 +514,23 @@ footer {
             }
     }
 
+    /* footer coder desktop */
     footer {
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex: 1 1 460px;
+        align-items: baseline;
         width: 100%;
         height: 467px;
-        flex-shrink: 0;
-        
+        padding-left: 4rem;
+        padding-right: 4rem;
+        gap: 20rem; 
         margin-top: 10rem;
-         
-       /*  .box {
-            width: 1fr;
-            flex-shrink: 0;
-        } */
+        
+        .box {
+            margin-top: 4rem;
+        }
 
-        /*.box-1 {
-            width: 40%;
-            flex-shrink: 0;
-        } */
-            
-
+        .box:last-of-type {
+            margin-left: -15rem;
+        }
     }
 }
