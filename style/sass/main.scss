@@ -1,0 +1,271 @@
+/* main code block */
+.main {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    padding-top: 1.5rem;
+
+    margin-bottom: 5rem;
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .blue-btn {
+            display: block;
+            margin-bottom: 2rem;
+            width: 308px;
+            height: 66px;
+    
+            background-color: $lightblue;
+            border-radius: 5px;
+    
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .btn {
+            display: block;
+            margin-bottom: 3rem;
+            
+            background-color: $white;
+            color: $blue;
+            
+            font-size: 1rem;
+            text-decoration: underline;
+        }
+    }
+
+    .fixed-buttons {
+        margin-bottom: 2rem;
+    }
+
+    .quote-flex {
+        padding: 10px;
+
+        .quote {
+            display: flex;
+            justify-content: center;
+            max-width: 522px;
+            flex-shrink: 0;
+            height: 141px;
+    
+            margin-top: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 4rem;
+    
+        }
+    
+        .hidden {
+            display: none;
+        }
+
+        .col-2 {
+            width: 80%;
+            flex-shrink: 0;
+            padding-left: 0.5rem;
+    
+            line-height: $quoteLineHeight;
+    
+            .quote-txt {
+                font-size: 1.5rem;
+                font-style: italic;
+            }
+    
+            .source {
+                display: block;
+                margin-top: 0.2rem;
+    
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+        
+        /* challenge-booking div */
+        .booking-header {
+            display: block;
+            margin-bottom: 2rem;
+            
+            font-size: 32px;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .challenge-booking {
+            width: 100%;
+            padding-left: 7%;
+            .flex-booking {
+                display: flex;
+                gap: 2rem;
+                align-items: stretch;
+                flex-shrink: 0;
+                
+                /* padding-left: 11%; */
+                overflow-x: auto;
+                width: 100%;
+                height: 446px;
+                margin-bottom: 4rem;
+                
+                .booking {
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+                    flex-shrink: 0;
+                    width: 363px;
+                    height: 446px;
+
+                    border: 1px solid $grey;
+                    border-radius: 10px;
+                    
+                    .img-booking {
+                        width: 100%;
+                        height: auto;    
+                        border-top-right-radius: 10px;
+                        border-top-left-radius: 10px;
+                        
+                    }
+                    
+                    .review {
+                        padding: 0.5rem;
+                        
+                        .review-header {
+                            font-size: 28px;
+                            font-weight: 400;
+                            font-style: normal;
+                            
+                            padding: 0.5rem 0 0 0.5rem;
+                        }
+                        
+                        .grade {
+                            display: flex;
+                            width: 100%;
+                            flex-shrink: 0;
+                            gap: 15px;
+                            padding-left: 0.5rem;
+                            
+                            .stars {
+                                img {
+                                    padding-left: 5px;
+                                }
+                            }
+                            
+                            p {
+                                font-size: 0.9rem;
+                            }
+                        }
+                        
+                        .review-p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            font-style: normal;
+                            
+                            padding: 0.5rem;
+                        }
+                    }
+                    
+                    .booking-btn {
+                        /* display: block; */
+                        
+                        float: right;
+                        margin-top: 1em;
+                        margin-right: 1.2rem; 
+                        
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: $white;
+                        background-color: $red;
+                        
+                        width: 180px;
+                        height: 44px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+    }
+
+    .story-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        align-items: center;
+        color: $white;
+        background-color: $darkBlue;
+
+        width: 100%;
+        height: 500px;
+
+        p { 
+            font-size: 1.8rem;
+            line-height: 33px;
+
+            display: block;
+            margin-top: 5rem;
+            width: 90%;
+            max-width: 632px;
+            flex-shrink: 0;
+        }
+
+        button {
+            font-size: 1.5rem;
+            font-family: "Roboto", sans-serif;
+            background-color: $darkBlue;
+            color: $lightblue;
+            
+            display: block;
+            margin-top: 2rem;
+            border: 1px solid $lightblue;
+            width: 308px;
+            height: 66px;
+        }
+    }
+
+    .picture-grid {
+        display: grid;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+
+        div {
+            width: 100%;
+            h2 {
+                font-size: 2rem;
+                margin-top: 2rem;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-style: normal;
+                margin-top: 2rem;
+
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto; 
+            }
+
+            button {
+                color: $white;
+                background-color: $red;
+                border-radius: 10px;
+
+                max-width: 308px;
+                max-height: 66px;
+
+                display: block;
+                margin: 2rem 0 2rem 28px;
+                padding: 1rem 3rem;
+
+                font-size: 24px;
+                font-family: "Roboto", sans-serif;
+            }
+        }
+    }
+}

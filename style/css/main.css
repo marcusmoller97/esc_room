@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /*variables*/
-/*colors*/
+/* stylesheets */
 /* Base code */
 * {
   box-sizing: border-box;
@@ -21,6 +21,7 @@ body {
   background-color: #FFFFFF;
 }
 
+/* header code */
 .header {
   display: grid;
   grid-template-columns: 244px 1fr 1fr;
@@ -31,9 +32,6 @@ body {
 .header .section-logo {
   grid-row-start: 1;
   grid-column: 1/span 3;
-  /* fix flex header text so its looks like 
-   in the site on 480px and then responsive goes out to
-   Hacker Escape Rooms */
 }
 .header .section-logo .section-flex {
   padding-left: 0.75rem;
@@ -86,7 +84,7 @@ body {
   flex-direction: column;
   width: 100%;
   padding-top: 1.5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   /* challenge-booking div */
 }
 .main .buttons {
@@ -97,8 +95,6 @@ body {
 }
 .main .buttons .blue-btn {
   display: block;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   margin-bottom: 2rem;
   width: 308px;
   height: 66px;
@@ -109,13 +105,14 @@ body {
 }
 .main .buttons .btn {
   display: block;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   margin-bottom: 3rem;
   background-color: #FFFFFF;
   color: #36769D;
   font-size: 1rem;
   text-decoration: underline;
+}
+.main .fixed-buttons {
+  margin-bottom: 2rem;
 }
 .main .quote-flex {
   padding: 10px;
@@ -162,31 +159,29 @@ body {
   padding-left: 7%;
 }
 .main .challenge-booking .flex-booking {
-  /* padding-left: 7%; */
   display: flex;
   gap: 2rem;
   align-items: stretch;
-  /* height: 446px; */
   flex-shrink: 0;
   /* padding-left: 11%; */
   overflow-x: auto;
   width: 100%;
+  height: 446px;
   margin-bottom: 4rem;
 }
 .main .challenge-booking .flex-booking .booking {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-  width: 363px;
   flex-shrink: 0;
+  width: 363px;
   height: 446px;
   border: 1px solid #B6BDB5;
   border-radius: 10px;
 }
 .main .challenge-booking .flex-booking .booking .img-booking {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  height: 219px;
-  width: 100%;
 }
 .main .challenge-booking .flex-booking .booking .review {
   padding: 0.5rem;
@@ -217,10 +212,10 @@ body {
   padding: 0.5rem;
 }
 .main .challenge-booking .flex-booking .booking .booking-btn {
-  display: block;
+  /* display: block; */
   float: right;
   margin-top: 1em;
-  margin-right: rem;
+  margin-right: 1.2rem;
   font-size: 16px;
   font-weight: bold;
   color: #FFFFFF;
@@ -256,7 +251,6 @@ body {
   color: #8ACFE5;
   display: block;
   margin-top: 2rem;
-  /* margin-bottom: 2rem; */
   border: 1px solid #8ACFE5;
   width: 308px;
   height: 66px;
@@ -282,7 +276,6 @@ body {
   font-size: 1.5rem;
   font-style: normal;
   margin-top: 2rem;
-  /* padding: 2rem 0.5rem; */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -298,9 +291,6 @@ body {
   padding: 1rem 3rem;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
-}
-.main .picture-grid div:last-child {
-  /* margin-bottom: 4rem; */
 }
 
 footer {
@@ -334,7 +324,26 @@ footer .box .last-ul {
 }
 
 /* 1000px pitcure grid change */
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 965px) {
+  .header {
+    grid-template-columns: 244px 1fr 1fr;
+    grid-template-rows: 144px 72px 468px;
+  }
+  .header .section-logo .section-flex .header-logo {
+    width: 40%;
+    padding-bottom: 0.5rem;
+  }
+  .header .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    grid-row-start: 2;
+    grid-column: span 3;
+  }
+  .header .esc-header {
+    grid-row-start: 3;
+  }
   .picture-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -368,25 +377,10 @@ footer .box .last-ul {
     margin-right: auto;
   }
   /* header code desktop */
-  .header {
-    grid-template-columns: 244px 1fr 1fr;
-    grid-template-rows: 144px 72px 468px;
-  }
-  .header .section-logo .section-flex .header-logo {
+  .section-logo .section-flex .header-logo {
     width: 40%;
     font-size: 40px;
     padding-bottom: 0.5rem;
-  }
-  .header .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    grid-row-start: 2;
-    grid-column: span 3;
-  }
-  .header .esc-header {
-    grid-row-start: 3;
   }
   /* main code desktop */
   .main .flex-booking {
@@ -396,7 +390,7 @@ footer .box .last-ul {
     flex-direction: row-reverse;
     gap: 2rem;
     flex-shrink: 0;
-    transform: translateY(-2rem);
+    transform: translateY(-3.5rem);
   }
   .main .buttons .btn {
     font-size: 1.5rem;
@@ -409,6 +403,9 @@ footer .box .last-ul {
     margin-bottom: 2rem;
     height: 66px;
     width: 308px;
+  }
+  .main .fixed-buttons {
+    transform: translateY(0);
   }
   .main .quote-flex {
     display: flex;
