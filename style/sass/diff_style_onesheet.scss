@@ -1,3 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*variables*/
+/*colors*/
+$darkBlue: #011827;
+$red: #e3170a;
+$grey: #B6BDB5;
+$blue: #36769D;
+$lightblue: #8ACFE5;
+$white: #FFFFFF;
+$quoteLineHeight: 1.758rem;
+
+/* Base code */
+* {
+    box-sizing: border-box;
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: $white;
+}
+
+/* header code */
+.header {
+    display: grid;
+    grid-template-columns: 244px 1fr 1fr;
+    grid-template-rows: 144px 274px;
+
+    width: 100%;
+    background-color: $darkBlue;
+
+    .section-logo {
+        grid-row-start: 1;
+        grid-column: 1 / span 3;
+        
+        .section-flex {
+            padding-left: 0.75rem;
+            margin-top: 1.5rem;
+
+            display: flex;
+            align-items: flex-end;
+            flex-shrink: 0;
+            width: 100%;
+            height: 90px;
+        }
+
+        .esc-logo {
+            display: block;
+            width: 128px;
+            height: 82px;
+        }
+
+        .header-logo {
+            font-size: 1.5rem;
+            line-height: $quoteLineHeight;
+            font-weight: 700;
+            color: $white;
+
+            width: 20%;
+            flex-shrink: 0;
+            padding-left: 0.5rem;
+        }
+
+    }
+    .navbar {
+        display: none;
+
+        .list {
+            list-style-type: none;
+
+            .item {
+                color: $white;
+                font-size: 1.5rem;
+                font-weight: 700;
+                text-decoration: none;
+
+                &:hover {
+                    color: $lightblue;
+                }
+            }
+        }
+    }
+
+    .esc-header {
+        grid-row: 2;
+        grid-column: 1 / span 3;
+    
+        width: 100%;
+        height: 100%;
+    }
+}
+
 /* main code block */
 .main {
     display: flex;
@@ -5,8 +108,7 @@
     width: 100%;
     padding-top: 1.5rem;
 
-    margin-bottom: 5rem;
-
+    margin-bottom: 10rem;
     .buttons {
         display: flex;
         flex-direction: column;
@@ -14,6 +116,8 @@
         align-items: center;
         .blue-btn {
             display: block;
+            /* margin-left: auto; */
+            /* margin-right: auto; */
             margin-bottom: 2rem;
             width: 308px;
             height: 66px;
@@ -27,6 +131,8 @@
         
         .btn {
             display: block;
+            /* margin-left: auto; */
+            /* margin-right: auto; */
             margin-bottom: 3rem;
             
             background-color: $white;
@@ -35,10 +141,6 @@
             font-size: 1rem;
             text-decoration: underline;
         }
-    }
-
-    .fixed-buttons {
-        margin-bottom: 2rem;
     }
 
     .quote-flex {
@@ -98,33 +200,34 @@
         .challenge-booking {
             width: 100%;
             padding-left: 7%;
-
             .flex-booking {
+                /* padding-left: 7%; */
                 display: flex;
                 gap: 2rem;
                 align-items: stretch;
+                /* height: 446px; */
                 flex-shrink: 0;
-
+                
+                /* padding-left: 11%; */
                 overflow-x: auto;
                 width: 100%;
-                height: 446px;
                 margin-bottom: 4rem;
                 
                 .booking {
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-                    flex-shrink: 0;
                     width: 363px;
+                    flex-shrink: 0;
                     height: 446px;
-
                     border: 1px solid $grey;
                     border-radius: 10px;
                     
                     .img-booking {
-                        width: 100%;
-                        height: auto;    
+                        max-width: 100%;
                         border-top-right-radius: 10px;
                         border-top-left-radius: 10px;
                         
+                        height: 219px;
+                        width: 100%;    
                     }
                     
                     .review {
@@ -166,9 +269,11 @@
                     }
                     
                     .booking-btn {
+                        display: block;
+                        
                         float: right;
                         margin-top: 1em;
-                        margin-right: 1.2rem; 
+                        margin-right: rem; 
                         
                         font-size: 16px;
                         font-weight: bold;
@@ -199,7 +304,6 @@
         p { 
             font-size: 1.8rem;
             line-height: 33px;
-            text-align: center;
 
             display: block;
             margin-top: 5rem;
@@ -216,11 +320,14 @@
             
             display: block;
             margin-top: 2rem;
+            /* margin-bottom: 2rem; */
             border: 1px solid $lightblue;
             width: 308px;
             height: 66px;
         }
     }
+
+
 
     .picture-grid {
         display: grid;
@@ -244,7 +351,7 @@
                 font-size: 1.5rem;
                 font-style: normal;
                 margin-top: 2rem;
-
+                /* padding: 2rem 0.5rem; */
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto; 
@@ -265,6 +372,188 @@
                 font-size: 24px;
                 font-family: "Roboto", sans-serif;
             }
+
+            &:last-child {
+                /* margin-bottom: 4rem; */
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
+    gap: 2rem;
+    background-color: $darkBlue;
+    color: $white;
+
+    padding: 3rem 1.2rem;
+
+    .box {
+        max-width: 438px;
+        flex-shrink: 0;
+        font-size: 18px;
+        font-weight: 400;
+
+        h4 {
+            padding-bottom: 0.5rem;
+        }
+
+        ul li {
+            list-style-type: none;
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+
+        }
+        
+        .last-ul {
+            padding-top: 2rem;
+        }
+            
+    }
+}
+
+/* 1000px pitcure grid change */
+@media  screen and (min-width: 950px) {
+    .picture-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    max-width: 640px;
+                    max-height: 460px;
+                }
+
+                div {
+                    max-width: 640px;
+                    max-height: 460px;
+                    padding: 2rem 4rem;
+                }
+
+                .last-div {
+                    grid-row-start: 2;
+                    grid-column: 1 / span 1;
+                }
+
+                .last-image {
+                    grid-row-start: 2;
+                    grid-column: 2 / span 2;
+                }
+            }
+}
+
+/* desktop view */
+@media screen and (min-width: 1280px) {
+    body {
+        width: 1280px;
+        height: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* header code desktop */
+    .header {
+        grid-template-columns: 244px 1fr 1fr;
+        grid-template-rows: 144px  72px 468px;
+        
+        .section-logo {
+            .section-flex {
+                .header-logo {
+                    width: 40%;
+                    font-size: 40px;
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+                
+            grid-row-start: 2;
+            grid-column: span 3;
+        }
+        .esc-header {
+            grid-row-start: 3;
+        }
+
+
+    }
+
+    /* main code desktop */
+    .main {
+            .flex-booking {
+                margin-bottom: 8rem;
+            }
+
+            .buttons {
+                flex-direction: row-reverse;
+                
+                gap: 2rem;
+                flex-shrink: 0;
+                transform: translateY(-2rem);
+
+                .btn {
+                    font-size: 1.5rem;
+                    font-weight: 600rem;
+
+                    color: $white;
+                    background-color: $red;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    
+                    display: block;
+                    margin-bottom: 2rem;
+                    height: 66px;
+                    width: 308px;
+                }
+            }
+
+            .quote-flex {
+                display: flex;
+                width: 100%;
+
+                .hidden {
+                    display: flex;
+                }
+            }
+
+            .picture-grid {
+                max-height: 920px;
+
+                div {
+                    padding: 4rem;
+                }
+            }
+    }
+
+    /* footer coder desktop */
+    footer {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 20rem;
+
+        width: 100%;
+        height: 467px;
+
+        padding-left: 4rem;
+        padding-right: 4rem;
+        
+        .box {
+            margin-top: 4rem;
+        }
+
+        .box:last-of-type {
+            margin-left: -15rem;
         }
     }
 }

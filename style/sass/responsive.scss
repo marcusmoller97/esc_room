@@ -7,7 +7,8 @@
         .section-logo {
             .section-flex {
                 .header-logo {
-                    width: 40%;
+                    width: 50%;
+                    font-size: 2rem;
                     padding-bottom: 0.5rem;
                 }
             }
@@ -27,6 +28,35 @@
         }
     }
 
+    .main {
+        .buttons {
+                flex-direction: row-reverse;
+                
+                gap: 2rem;
+                flex-shrink: 0;
+                transform: translateY(-3.5rem);
+
+                .btn {
+                    font-size: 1.5rem;
+                    font-weight: 600rem;
+
+                    color: $white;
+                    background-color: $red;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    
+                    display: block;
+                    margin-bottom: 2rem;
+                    height: 66px;
+                    width: 308px;
+                }
+            }
+
+            .fixed-buttons {
+                transform: translateY(0);
+            }
+    }
+    
     .picture-grid {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto auto;
@@ -34,6 +64,7 @@
                 img {
                     width: auto;
                     height: 100%;
+                    object-fit: cover;
                     max-width: 640px;
                     max-height: 460px;
                 }
@@ -54,6 +85,31 @@
                     grid-column: 2 / span 2;
                 }
             }
+}
+
+@media screen and (min-width: 1180px) {
+    .header {
+
+        .section-logo {
+            .section-flex {
+                .header-logo {
+                    width: 40%;
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    .main {
+        
+        .challenge-booking {
+            padding-left: 0px;
+    
+            .flex-booking {
+                justify-content: center;
+            }
+        }
+    }
 }
 
 /* desktop view */
@@ -81,33 +137,6 @@
     .main {
             .flex-booking {
                 margin-bottom: 8rem;
-            }
-
-            .buttons {
-                flex-direction: row-reverse;
-                
-                gap: 2rem;
-                flex-shrink: 0;
-                transform: translateY(-3.5rem);
-
-                .btn {
-                    font-size: 1.5rem;
-                    font-weight: 600rem;
-
-                    color: $white;
-                    background-color: $red;
-                    text-decoration: none;
-                    border-radius: 5px;
-                    
-                    display: block;
-                    margin-bottom: 2rem;
-                    height: 66px;
-                    width: 308px;
-                }
-            }
-
-            .fixed-buttons {
-                transform: translateY(0);
             }
 
             .quote-flex {
