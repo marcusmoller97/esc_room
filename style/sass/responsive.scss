@@ -14,15 +14,19 @@
             }
         }
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8rem;
-                
+        nav {
             grid-row-start: 2;
             grid-column: span 3;
+
+            .navbar {
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                gap: 8rem;
+            }
         }
+
         .esc-header {
             grid-row-start: 3;
         }
@@ -89,7 +93,6 @@
 
 @media screen and (min-width: 1180px) {
     .header {
-
         .section-logo {
             .section-flex {
                 .header-logo {
@@ -101,7 +104,6 @@
     }
 
     .main {
-        
         .challenge-booking {
             padding-left: 0px;
     
