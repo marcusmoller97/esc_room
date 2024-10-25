@@ -4,3 +4,5 @@
 node_modules
 #ignore style/css/main.min.css
 *main.css.map
+#ignore style/sass/diff_style_onesheet.scss
+*diff_style_onesheet
