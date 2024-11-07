@@ -23,7 +23,7 @@ function createNav () {
     /* opacity all elements except mobile-nav */
     const elements = document.querySelectorAll("body *:not(#mobile-nav)");
     elements.forEach(ele => {
-        ele.style.opacity = "0.5";
+        fadeOut(ele);
     });
 
     /* add style to nav */
@@ -32,11 +32,12 @@ function createNav () {
     navContainer.style.bottom = "0";
     navContainer.style.left = "0";
     navContainer.style.right = "0";
+    navContainer.style.opacity = "0";
 
     navContainer.style.margin = "auto";
 
-    navContainer.style.width = "90%";/*`${window.innerWidth}px`*/
-    navContainer.style.height = "95%";/*`${window.innerHeight}px`*/
+    navContainer.style.width = "90%";
+    navContainer.style.height = "95%";
     navContainer.style.backgroundColor = "#011827";
 
     /* add navContainer  */
@@ -65,13 +66,15 @@ function createNav () {
     /* create div for exitImg and add exitImg */
     const exitFig = document.createElement("article");
     exitFig.style.height = "90px";
+    exitFig.classList.add("exit-article");
     const exitImg = document.createElement("img");
     exitImg.src = "./img/close.png";
     exitImg.alt = "";
-    exitImg.id = "exit-img"
+    exitImg.id = "exit-img";
 
     exitImg.style.float = "right";
     exitImg.style.padding = "1.5rem 1.5rem";
+    exitImg.style.opacity = "0";
 
     exitFig.append(exitImg);
 
@@ -79,27 +82,68 @@ function createNav () {
     navContainer.append(exitFig);
     navContainer.append(clonedLi);
 
+    setTimeout(() => {
+        fadeIn(navContainer);
+        setTimeout(() => {
+            const exitImg = document.querySelector("#exit-img");
+            fadeIn(exitImg);
+
+        }, 100);
+    }, "200");
+
     /* exitImg click */
     clickExit();
 }
 
+function fadeIn (element) {
+    element.animate(
+        [
+            { opacity: 0 },
+            { opacity: 1 }
+        ],
+        {
+            duration: 500,
+            easing: "ease-in-out",
+            fill: "forwards"
+        }
+    );
+}
+
+function fadeOut (element) {
+    const animation = element.animate(
+        [
+            { opacity: 1 },
+            { opacity: 0.5 }
+        ],
+        {
+            duration: 500,
+            easing: "ease-in-out",
+            fill: "none"
+        }
+    );
+
+    animation.onfinish = () => {
+        element.style.opacity = 0.5;
+    };
+}
+
 function clickExit () {
-    const clickExit = document.querySelector("#exit-img")
+    const clickExit = document.querySelector("#exit-img");
     clickExit.addEventListener("click", () => {
-        const nav = document.querySelector("#mobile-nav")
-        nav.remove()
+        const nav = document.querySelector("#mobile-nav");
+        nav.remove();
         const elements = document.querySelectorAll("body *:not(#mobile-nav)");
         elements.forEach(ele => {
             ele.style.opacity = "1";
         });
-    })
+    });
 }
-
 
 function hamburgerMenu () {
     const sectionLogo = document.querySelector(".section-flex");
-    console.log(sectionLogo);
+
     const div = document.createElement("div");
+
     div.classList.add("icon");
     div.style.display = "flex";
     div.style.float = "left";
@@ -118,5 +162,4 @@ function hamburgerMenu () {
         img.src = "./img/line.png";
         div.append(img);
     }
-
 }
