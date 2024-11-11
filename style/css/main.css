@@ -339,7 +339,7 @@ footer .box .last-ul {
 }
 
 .mobile-nav {
-  position: absolute;
+  position: fixed;
   inset: 0;
   margin: auto;
   width: 90%;

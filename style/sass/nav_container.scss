@@ -1,0 +1,60 @@
+.exit-article {
+    height: 90px;
+
+    img {
+        float: right;
+        padding: 1.5rem 1.5rem;
+    }
+}
+.mobile-nav {
+    position: fixed;
+    inset: 0;
+
+    margin: auto;
+    width: 90%;
+    height: 95%;
+
+    background-color: $darkBlue;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px $grey;
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        margin-top: auto;
+        margin-bottom: auto;
+        height: calc(100% - 90px - 8rem);
+        text-decoration: none;
+
+        .list {
+            list-style-type: none;
+
+            a{
+                color: #FFF;
+                text-decoration: none;
+                font-size: 36px;
+                font-weight: bold;
+            }
+        }
+
+        .ele1{
+            order: 2;
+        }
+
+        .ele2{
+            order: 1;
+        }
+
+        .ele3{
+            order: 3;
+        }
+
+        .ele4{
+            order: 4;
+        }
+    }
+}
